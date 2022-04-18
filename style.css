@@ -14,6 +14,7 @@
 
 html {
     font-size: 15px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -150,7 +151,7 @@ section#tabs .line {
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url("student.jpg");
     /* background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("student.jpg"); */
     opacity: .8;
-    height: 75vh;
+    height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
     clip-path: polygon(25% 0, 100% 0%, 100% 99%, 0% 100%);
@@ -182,7 +183,7 @@ section#tabs .line {
     /* background-color: rgb(250, 250, 250); */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 5rem;
+    gap: 2rem;
     /* border: 2px solid red; */
 }
 
@@ -191,7 +192,7 @@ section#tabs .line {
     align-items: center;
     text-align: center;
     flex-flow: column wrap;
-    padding: 3rem 0 3rem 5rem;
+    padding: 2rem;
     position: relative;
     /* border: 2px solid red; */
 }
@@ -218,7 +219,7 @@ section#tabs .line {
     border: 10px solid transparent;
     border-left-color: black;
     position: absolute;
-    top: calc(50% + 8px);
+    top: calc(50% + 10px);
     left: 150px;
 }
 
@@ -274,21 +275,27 @@ section#tabs .line {
     border: 10px solid transparent;
     border-left-color: black;
     position: absolute;
-    top: calc(50% + 8px);
+    top: calc(50% + 10px);
     left: 15.3rem;
 }
 
 .myQualifications_info .myQualificationsUl {
     width: 100%;
-    margin-left: 5rem;
+    margin-left: 3rem;
 }
 
 .myQualifications_info .myQualificationsUl li {
     list-style: circle;
     font-family: var(--secondary-font-family);
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: left;
     margin: .8rem 0;
+}
+
+.myQualifications_info .myQualificationsUl li span {
+    font-size: .9rem;
+    color: grey;
+    font-style: italic;
 }
 
 #myExperiences {
@@ -335,23 +342,50 @@ section#tabs .line {
 #myExperiences .languages {}
 
 @media screen and (max-width: 878px) {
-    .aboutMe .aboutMe_info {
-        padding: 3rem 5rem 0rem 5rem;
+    html {
+        font-size: 14px;
     }
+    .aboutMe .aboutMe_info {
+        padding: 2rem;
+    }
+    /* .myQualifications_info {
+        padding: 0;
+        margin-left: 54px;
+    } */
+}
+
+@media screen and (max-width: 827px) {
     .aboutMe .aboutMe_sideImg img {
         width: 38rem;
     }
-    .myQualifications_info {
-        padding: 0;
-        margin-left: 54px;
+    .myQualifications_info h1 {
+        width: auto;
     }
-    /* .myQualifications_info h1 {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
+    .myQualifications_info .myQualificationsUl {
+        width: auto;
     }
-    .myQualifications_info h1 .myQualifications_lineArrow .myQualifications_line::before {
-        left: 36.3rem;
-    } */
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 9px;
+    }
 }
