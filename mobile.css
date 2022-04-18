@@ -1,0 +1,119 @@
+nav {
+    border-bottom: 1px solid black;
+}
+
+section#logo {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+section#tabs ul {
+    flex-flow: column wrap;
+    gap: 1rem;
+    padding: 15px 0 15px 0;
+    background-color: rgb(0 0 0 / .1);
+    /* transform: scaleY(0); */
+    display: none;
+    transition: all .5s ease-in-out;
+    transform-origin: left top;
+    transform: scaleY(0);
+}
+
+#tabs ul li.active a::before {
+    border: 0;
+}
+
+div.line {
+    display: none;
+}
+
+#menu_toggle {
+    position: absolute;
+    height: 40px;
+    width: 50px;
+    /* border: 1px solid black; */
+    top: 8px;
+    right: 1.2rem;
+    cursor: pointer;
+    /* position: relative; */
+}
+
+#menu_toggle .menu_toggle_lines {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle {
+    height: 2px;
+    width: 30px;
+    background-color: black;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle::before,
+#menu_toggle .menu_toggle_lines .menuToggle::after {
+    content: '';
+    height: 2px;
+    width: 30px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .1s ease-in;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle.menuToggle::before {
+    top: 30%;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle::after {
+    top: 70%;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle.open {
+    background-color: transparent;
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle.open::before {
+    transform: rotate(45deg) translate(-7px, 17px);
+}
+
+#menu_toggle .menu_toggle_lines .menuToggle.open::after {
+    transform: rotate(-45deg) translate(-5px, -18px);
+}
+
+.menuTitle {
+    font-family: var(--secondary-font-family);
+    padding: 2px 8px;
+    /* border: 1px solid grey; */
+    background-color: rgb(0 0 0 / .3);
+    /* border-radius: 100px; */
+    font-size: .7rem;
+    position: absolute;
+    left: -110%;
+    display: none;
+}
+
+.menuTitle::before {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    border-left-color: rgb(0 0 0 / .3);
+    position: absolute;
+    left: 112%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#menu_toggle .menu_toggle_lines:hover .menuTitle {
+    display: block;
+}
+
+.sideImg {
+    display: none;
+}
