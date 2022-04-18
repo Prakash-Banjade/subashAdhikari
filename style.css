@@ -313,7 +313,9 @@ section#tabs .line {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 3rem;
-    padding: 0 2px;
+    background-color: black;
+    color: white;
+    padding: 5px;
 }
 
 #myExperiences .myExperiences_info {
