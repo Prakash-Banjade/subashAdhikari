@@ -114,10 +114,20 @@ div.line {
     display: block;
 }
 
+#main_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #main_body .typeWriter {
     height: 80vh;
 }
 
 .sideImg {
     display: none;
+}
+
+.aboutMe .aboutMe_sideImg img {
+    width: 100%;
 }

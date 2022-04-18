@@ -39,8 +39,8 @@ nav section#logo h2 {
 }
 
 section#logo h2 span img {
-    height: 30px;
-    width: 30px;
+    height: 1.9rem;
+    width: 1.9rem;
 }
 
 #tabs {
@@ -180,14 +180,16 @@ section#tabs .line {
 .aboutMe {
     margin-top: 10rem;
     width: 100vw;
-    /* background-color: rgb(250, 250, 250); */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
     gap: 2rem;
     /* border: 2px solid red; */
 }
 
 .aboutMe .aboutMe_info {
+    width: 30rem;
     display: flex;
     align-items: center;
     text-align: center;
@@ -241,6 +243,10 @@ section#tabs .line {
     width: 430px; */
     height: 22.5rem;
     width: 25rem;
+}
+
+.myQualifications {
+    margin-top: 0;
 }
 
 .myQualifications_info {
@@ -299,22 +305,27 @@ section#tabs .line {
 }
 
 #myExperiences {
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
-    /* border: 2px solid red; */
-    gap: 2rem;
+    margin-top: 5rem;
 }
 
 #myExperiences h1 {
     font-family: var(--secondary-font-family);
     font-size: 2rem;
     text-align: center;
-    grid-column: 1 / span 2;
+    margin-bottom: 3rem;
+    padding: 0 2px;
+}
+
+#myExperiences .myExperiences_info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 5rem;
 }
 
 #myExperiences .experiences {
-    padding: 3rem;
+    width: 40%;
+    /* min-width: 500px; */
 }
 
 #myExperiences .experiences ul li {
@@ -339,7 +350,232 @@ section#tabs .line {
     margin-left: 35px;
 }
 
-#myExperiences .languages {}
+#myExperiences .languages {
+    display: flex;
+    width: 40%;
+    /* min-width: 500px; */
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+#myExperiences p {
+    font-family: var(--secondary-font-family);
+    font-size: 1.2rem;
+}
+
+.per_row {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.bar_html::before,
+.bar_css::before,
+.bar_js::before,
+.bar_java::before,
+.bar_c::before {
+    content: '';
+    height: inherit;
+    /* width: 85%; */
+    background-color: black;
+    position: absolute;
+}
+
+.bar_html::before {
+    width: 85%;
+}
+
+.bar_css::before {
+    width: 75%;
+}
+
+.bar_js::before {
+    width: 60%;
+}
+
+.bar_c::before {
+    width: 60%;
+}
+
+.bar_java::before {
+    width: 50%;
+}
+
+.percentage {
+    font-style: italic;
+    font-size: 1rem;
+    font-family: var(--secondary-font-family);
+    background-color: black;
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: white;
+    position: absolute;
+    top: 18px;
+    /* left: calc(85% - 1rem ); */
+}
+
+.per_html {
+    left: calc(85% - 1rem - 5px);
+}
+
+.per_css {
+    left: calc(75% - 1rem - 5px);
+}
+
+.per_c {
+    left: calc(60% - 1rem - 5px);
+}
+
+.per_java {
+    left: calc(50% - 1rem - 5px);
+}
+
+.per_js {
+    left: calc(60% - 1rem - 5px);
+}
+
+.bar {
+    height: 7px;
+    width: 100%;
+    background-color: grey;
+    position: relative;
+}
+
+.perCaret {
+    height: 0;
+    width: 0;
+    border: 10px solid transparent;
+    border-bottom-color: black;
+    position: absolute;
+    top: 0;
+}
+
+.perCaret-html {
+    left: calc(85% - 10px);
+}
+
+.perCaret-css {
+    left: calc(75% - 10px);
+}
+
+.perCaret-js {
+    left: calc(60% - 10px);
+}
+
+.perCaret-java {
+    left: calc(50% - 10px);
+}
+
+.perCaret-c {
+    left: calc(60% - 10px);
+}
+
+.learnings {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-flow: column wrap;
+}
+
+.learnings h1 {
+    font-family: var(--secondary-font-family);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.learnings .learning_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.learnings .learning {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    /* padding: 5rem 5rem 5rem 5rem; */
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgb(0 0 0 / .5);
+    position: relative;
+}
+
+.learnings .learning i {
+    font-size: 10rem;
+}
+
+.learnings .learning .learning_info {
+    font-family: var(--secondary-font-family);
+    padding: 2px 5px;
+    font-size: 1rem;
+    /* border: 2px solid red; */
+    background-color: gray;
+    color: white;
+    padding: 10px 17px;
+    border-radius: 8px;
+    width: 80%;
+    opacity: 0;
+    position: absolute;
+    top: 85%;
+    /* animation: fadeIn .5s, fadeOut .5s; */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        top: 70%;
+    }
+    30% {
+        opacity: .5;
+        top: 85%;
+    }
+    70% {
+        opacity: 1;
+        top: 95%;
+    }
+    100% {
+        opacity: 1;
+        top: 85%;
+    }
+}
+
+@keyframes fadeOut {
+    form {
+        opacity: 1;
+        top: 85%;
+    }
+    to {
+        opacity: 0;
+        top: 70%;
+    }
+}
+
+@media screen and (max-width: 1074px) {
+    #myExperiences .experiences {
+        width: auto;
+        padding-left: 30px;
+    }
+    #myExperiences .languages {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 914px) {
+    .aboutMe .aboutMe_sideImg {
+        width: 90%;
+    }
+    .aboutMe .aboutMe_sideImg img {
+        width: 70%;
+    }
+    .aboutMe .aboutMe_info {
+        width: 90%;
+    }
+}
 
 @media screen and (max-width: 878px) {
     html {
@@ -355,9 +591,9 @@ section#tabs .line {
 }
 
 @media screen and (max-width: 827px) {
-    .aboutMe .aboutMe_sideImg img {
+    /* .aboutMe .aboutMe_sideImg img {
         width: 38rem;
-    }
+    } */
     .myQualifications_info h1 {
         width: auto;
     }
