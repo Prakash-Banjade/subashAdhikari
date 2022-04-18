@@ -36,6 +36,7 @@ nav section#logo h2 {
     font-family: var(--primary-font-family);
     font-size: 2rem;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 section#logo h2 span img {
@@ -184,8 +185,6 @@ section#tabs .line {
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    gap: 2rem;
-    /* border: 2px solid red; */
 }
 
 .aboutMe .aboutMe_info {
@@ -239,10 +238,9 @@ section#tabs .line {
 }
 
 .aboutMe .aboutMe_sideImg img {
-    /* height: 300px;
-    width: 430px; */
-    height: 22.5rem;
+    /* height: 22.5rem; */
     width: 25rem;
+    aspect-ratio: 16 / 9;
 }
 
 .myQualifications {
@@ -256,7 +254,7 @@ section#tabs .line {
     flex-flow: column wrap;
     padding: 3rem 0 3rem 5rem;
     position: relative;
-    padding: 3rem 5rem 3rem 0;
+    padding: 2rem;
 }
 
 .myQualifications_info h1 {
@@ -482,10 +480,15 @@ section#tabs .line {
     flex-flow: column wrap;
 }
 
-.learnings h1 {
+.learnings header h1 {
     font-family: var(--secondary-font-family);
     font-size: 2rem;
     margin-bottom: 2rem;
+    text-align: center;
+    border: 2px solid transparent;
+    border-top-color: black;
+    border-bottom-color: black;
+    position: relative;
 }
 
 .learnings .learning_container {
@@ -557,10 +560,186 @@ section#tabs .line {
     }
 }
 
+footer.upper_footer {
+    width: 100vw;
+    background-color: #121212;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    color: white;
+    padding-top: 2rem;
+}
+
+footer.upper_footer .about {
+    width: 35%;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+footer.upper_footer .about h1 {
+    font-family: var(--primary-font-family);
+    font-size: 1.8rem;
+}
+
+footer.upper_footer .about p {
+    font-family: var(--secondary-font-family);
+    font-size: 1rem;
+    text-align: justify;
+}
+
+footer.upper_footer .about .copy {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+footer.upper_footer .about img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    /* margin-top: 5rem;
+    margin-left: 5rem; */
+}
+
+footer.upper_footer .about h3 {
+    font-family: var(--secondary-font-family);
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+footer.upper_footer .contactMe {
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+
+footer.upper_footer .contactMe .contactMe_info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    /* gap: 1rem */
+}
+
+footer.upper_footer .contactMe h1 {
+    font-family: var(--primary-font-family);
+    /* font-family: var(--secondary-font-family); */
+    font-size: 1.8rem;
+    text-align: center;
+    width: 60%;
+    /* padding-left: 1.5rem; */
+}
+
+footer.upper_footer .contactMe .contactMe-info {
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+}
+
+footer.upper_footer .contactMe .contactMe-info p {
+    font-family: var(--secondary-font-family);
+    font-size: 1rem;
+}
+
+footer.upper_footer .contactMe .contactMe-info a {
+    text-decoration: none;
+    font-family: var(--secondary-font-family);
+    color: white;
+}
+
+footer.upper_footer .contactMe .contactMe-info a:hover {
+    /* color: rgba(0, 0, 0, .5); */
+    opacity: .7;
+}
+
+footer.upper_footer .contactMe .contactMe-info .copy2 {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    display: none;
+}
+
+footer.upper_footer .contactMe .contactMe-info img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+
+footer.upper_footer .contactMe .contactMe-info h3 {
+    font-family: var(--secondary-font-family);
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+footer.upper_footer .contactMe .contactMe-form {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer.upper_footer .contactMe .contactMe-form label {
+    font-family: var(--secondary-font-family);
+}
+
+footer.upper_footer .contactMe .contactMe-form input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 1rem;
+}
+
+footer.upper_footer .contactMe .contactMe-form textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+
+footer.upper_footer .contactMe .contactMe-form button {
+    padding: 5px 10px;
+    font-family: var(--secondary-font-family);
+    background-color: gray;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+footer.lower_footer {
+    width: 100vw;
+    background-color: black;
+    padding: .5rem;
+}
+
+footer.lower_footer p {
+    text-align: center;
+    color: white;
+    font-family: var(--secondary-font-family);
+    font-size: .8rem;
+}
+
+footer.lower_footer p a {
+    text-decoration: none;
+    color: white;
+    padding: 0 1rem;
+}
+
+footer.lower_footer p a:hover {
+    opacity: .8;
+}
+
 @media screen and (max-width: 1074px) {
     #myExperiences .experiences {
         width: auto;
-        padding-left: 30px;
     }
     #myExperiences .languages {
         width: 80%;
@@ -604,15 +783,25 @@ section#tabs .line {
     }
 }
 
-@media screen and (max-width: 700px) {
-    html {
-        font-size: 13px;
-    }
-}
-
 @media screen and (max-width: 500px) {
     html {
         font-size: 11px;
+    }
+    footer.upper_footer .contactMe .contactMe_info {
+        flex-flow: column wrap;
+    }
+    footer.upper_footer .contactMe .contactMe_info .contactMe-info form {
+        width: 100%;
+    }
+    footer.upper_footer .contactMe .contactMe-info,
+    footer.upper_footer .contactMe .contactMe-form {
+        width: 100%;
+    }
+    footer.lower_footer p a {
+        padding: 0 .5rem;
+    }
+    footer.upper_footer .contactMe .contactMe-info .copy2 {
+        display: none;
     }
 }
 
@@ -620,10 +809,20 @@ section#tabs .line {
     html {
         font-size: 10px;
     }
+    footer.lower_footer p a {
+        padding: 0 .1rem;
+        font-size: .5rem;
+    }
 }
 
 @media screen and (max-width: 300px) {
     html {
         font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    html {
+        font-size: 7px;
     }
 }

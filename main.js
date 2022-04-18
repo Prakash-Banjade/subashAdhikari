@@ -36,3 +36,7 @@ for (item of boxes) {
         }, 280);
     })
 }
+
+document.getElementById('logo').children[0].addEventListener('click', () => {
+    location.href = 'index.html';
+})
