@@ -5,7 +5,12 @@ html {
 nav {
     border-bottom: 1px solid black;
     gap: 0;
-    padding: 10px 0;
+    padding: -1;
+    height: 50px;
+}
+
+#goTop .goTop::before {
+    top: -53%;
 }
 
 section#logo {
@@ -51,8 +56,8 @@ div.line {
 
 #menu_toggle {
     position: absolute;
-    height: 40px;
-    width: 50px;
+    height: 50px;
+    width: 40px;
     /* border: 1px solid black; */
     top: 0;
     right: 1.2rem;
@@ -78,8 +83,8 @@ div.line {
 #menu_toggle .menu_toggle_lines .menuToggle::before,
 #menu_toggle .menu_toggle_lines .menuToggle::after {
     content: '';
-    height: 2px;
-    width: 30px;
+    height: inherit;
+    width: inherit;
     background-color: black;
     position: absolute;
     left: 50%;
@@ -88,11 +93,11 @@ div.line {
 }
 
 #menu_toggle .menu_toggle_lines .menuToggle.menuToggle::before {
-    top: 30%;
+    top: 32%;
 }
 
 #menu_toggle .menu_toggle_lines .menuToggle::after {
-    top: 70%;
+    top: 68%;
 }
 
 #menu_toggle .menu_toggle_lines .menuToggle.open {
@@ -100,11 +105,11 @@ div.line {
 }
 
 #menu_toggle .menu_toggle_lines .menuToggle.open::before {
-    transform: rotate(45deg) translate(-7px, 17px);
+    transform: rotate(45deg) translate(-7px, 16px);
 }
 
 #menu_toggle .menu_toggle_lines .menuToggle.open::after {
-    transform: rotate(-45deg) translate(-5px, -18px);
+    transform: rotate(-45deg) translate(-4px, -20px);
 }
 
 .menuTitle {
@@ -114,7 +119,7 @@ div.line {
     border-radius: 100px;
     font-size: .7rem;
     position: absolute;
-    top: 120%;
+    top: 95%;
     color: white;
     display: none;
 }
@@ -193,3 +198,64 @@ footer.upper_footer .contactMe .contactMe_info {
         display: none;
     }
 }
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    html {
+        font-size: 10px;
+    }
+    #goTop .goTop::before {
+        top: -65%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 9px;
+    }
+    section#logo {
+        padding-left: 10px;
+    }
+    #menu_toggle {
+        right: .1rem;
+    }
+    #goTop .goTop::before {
+        top: -73%;
+    }
+    #menu_toggle .menu_toggle_lines .menuToggle {
+        width: 25px;
+    }
+    #menu_toggle .menu_toggle_lines .menuToggle.menuToggle::before {
+        top: 35%;
+    }
+    #menu_toggle .menu_toggle_lines .menuToggle::after {
+        top: 63%;
+    }
+    #menu_toggle .menu_toggle_lines .menuToggle.open::before {
+        transform: rotate(45deg) translate(-7px, 10px);
+    }
+    #menu_toggle .menu_toggle_lines .menuToggle.open::after {
+        transform: rotate(-45deg) translate(0px, -17px);
+    }
+    /* .menuTitle {
+        top: 100%;
+    } */
+}
+
+
+/* @media screen and (max-width: 250px) {
+    section#logo {
+        padding-left: 2px;
+    }
+} */

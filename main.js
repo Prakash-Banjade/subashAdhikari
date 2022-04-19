@@ -6,12 +6,18 @@ menu.addEventListener('click', () => {
         document.querySelector('.menuToggle').classList.add('open');
         tab.style.display = "flex";
         tab.style.transform = "scaleY(1)";
+        document.getElementById('navi').style.height = "auto";
+        document.getElementById('nameLogo').style.marginBottom = "10px";
         // tab.style.transition = 'all 4s ease-in-out';
         menuOpen = true;
     } else {
         document.querySelector('.menuToggle').classList.remove('open');
         tab.style.display = "none";
         tab.style.transform = "scaleY(0)";
+        document.getElementById('navi').style.height = "50px";
+        document.getElementById('nameLogo').style.marginBottom = "0px";
+
+
         // tab.style.transition = 'all 4s ease-in-out';
         menuOpen = false;
 
@@ -39,4 +45,22 @@ for (item of boxes) {
 
 document.getElementById('logo').children[0].addEventListener('click', () => {
     location.href = 'index.html';
+})
+
+
+window.onscroll = function() {
+    GoTop();
+}
+
+function GoTop() {
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+        document.getElementById('goTop').style.display = 'block';
+
+    } else {
+        document.getElementById('goTop').style.display = 'none';
+
+    }
+}
+document.getElementById('goTop').addEventListener('click', () => {
+    location.href = '#navi';
 })
