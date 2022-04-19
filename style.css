@@ -34,9 +34,10 @@ nav {
 
 nav section#logo h2 {
     font-family: var(--primary-font-family);
-    font-size: 2rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
     cursor: pointer;
+    display: inline;
 }
 
 section#logo h2 span img {
@@ -146,6 +147,41 @@ section#tabs .line {
 
 #main_body .typeWriter p span {
     font-family: var(--type-writer);
+    position: relative;
+    /* color: red; */
+}
+
+#main_body .typeWriter p span::before,
+#main_body .typeWriter p span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#main_body .typeWriter p span::before {
+    background-color: white;
+    animation: typeWriter 4s steps(16) forwards;
+}
+
+#main_body .typeWriter p span::after {
+    width: .125em;
+    background-color: black;
+    animation: typeWriter 4s steps(16) forwards, blink .45s steps(16) forwards infinite;
+}
+
+@keyframes typeWriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
 }
 
 #main_body .sideImg {
@@ -716,6 +752,11 @@ footer.upper_footer .contactMe .contactMe-info a {
 footer.upper_footer .contactMe .contactMe-info a:hover {
     /* color: rgba(0, 0, 0, .5); */
     opacity: .7;
+}
+
+footer.upper_footer .contactMe .contactMe-info .icons a i {
+    font-size: 2rem;
+    margin-right: 2rem;
 }
 
 footer.upper_footer .contactMe .contactMe-info .copy2 {

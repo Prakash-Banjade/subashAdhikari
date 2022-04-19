@@ -64,3 +64,14 @@ function GoTop() {
 document.getElementById('goTop').addEventListener('click', () => {
     location.href = '#navi';
 })
+
+
+
+// console.log(lengthCount);
+// setTimeout(() => {
+//     let typeWriter = document.getElementById('typing');
+//     typeWriter.innerText = "Prakash Banjade"
+//     let lengthCount = typeWriter.innerText.length;
+//     console.log(lengthCount)
+//     typeWriter.style.animation = `typeWriter 4s steps(${lengthCount}) infinite`;
+// }, 4000);
