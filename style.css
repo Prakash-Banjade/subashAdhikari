@@ -24,12 +24,12 @@ body {
 nav {
     padding-top: 10px;
     width: 100vw;
+    border-bottom: 2px solid transparent;
     display: flex;
     flex-flow: column wrap;
     gap: 1rem;
     text-align: center;
     justify-content: space-around;
-    position: relative;
 }
 
 nav section#logo h2 {
@@ -56,9 +56,9 @@ section#logo h2 span img {
 
 section#tabs ul {
     width: 700px;
-    max-width: 100vw;
+    /* max-width: 100vw; */
     display: flex;
-    text-align: center;
+    align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     z-index: 1;
@@ -72,6 +72,7 @@ section#tabs .line {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* display: none; */
     /* z-index: 1; */
 }
 
@@ -97,7 +98,7 @@ section#tabs .line {
     border: 10px solid transparent;
     border-top-color: black;
     position: absolute;
-    top: 100%;
+    top: 95%;
     left: calc(50% - 10px);
 }
 
@@ -163,13 +164,13 @@ section#tabs .line {
 
 #main_body .typeWriter p span::before {
     background-color: white;
-    animation: typeWriter 4s steps(16) forwards;
+    animation: typeWriter 4s steps(15) forwards;
 }
 
 #main_body .typeWriter p span::after {
     width: .125em;
     background-color: black;
-    animation: typeWriter 4s steps(16) forwards, blink .45s steps(16) forwards infinite;
+    animation: typeWriter 4s steps(15) forwards, blink .45s steps(15) forwards infinite;
 }
 
 @keyframes typeWriter {
@@ -839,6 +840,9 @@ footer.lower_footer p a:hover {
 }
 
 @media screen and (max-width: 1074px) {
+    nav {
+        flex-flow: column wrap;
+    }
     #myExperiences .experiences {
         width: auto;
     }

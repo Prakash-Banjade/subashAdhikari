@@ -66,12 +66,10 @@ document.getElementById('goTop').addEventListener('click', () => {
 })
 
 
+setTimeout(() => {
 
-// console.log(lengthCount);
-// setTimeout(() => {
-//     let typeWriter = document.getElementById('typing');
-//     typeWriter.innerText = "Prakash Banjade"
-//     let lengthCount = typeWriter.innerText.length;
-//     console.log(lengthCount)
-//     typeWriter.style.animation = `typeWriter 4s steps(${lengthCount}) infinite`;
-// }, 4000);
+}, 4000);
+setInterval(() => {
+
+
+})
