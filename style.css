@@ -788,7 +788,10 @@ footer.upper_footer .contactMe .contactMe-form {
     display: flex;
     flex-direction: column;
 }
-
+footer.upper_footer .contactMe .contactMe-form{
+    font-family: var(--secondary-font-family);
+    color: white;
+}
 footer.upper_footer .contactMe .contactMe-form label {
     font-family: var(--secondary-font-family);
 }
